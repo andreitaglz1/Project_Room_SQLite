@@ -5,18 +5,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.widget.Button
+import android.widget.EditText
 import com.andrea.roomsqlite.databinding.ActivityNewCiudadBinding
 
 class NewCiudadActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityNewCiudadBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_ciudad)
 
-        val editCiudadView = binding.editCiudad
+        val editCiudadView = findViewById<EditText>(R.id.edit_ciudad)
 
-        val button = binding.buttonSave
+        val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {
             val replyIntent = Intent()
             if(TextUtils.isEmpty(editCiudadView.text)){

@@ -1,6 +1,4 @@
-
-
-package com.example.android.roomwordssample
+package com.andrea.roomsqlite
 
 import android.app.Activity
 import android.content.Intent
